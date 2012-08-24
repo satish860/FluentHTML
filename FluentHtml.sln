@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentHtml", "FluentHtml\FluentHtml.csproj", "{B7E9C44C-1310-44E9-901A-F00497F9F6DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentHtml.Test", "FluentHtml.Test\FluentHtml.Test.csproj", "{2398BF04-BE3A-42F9-BE81-75DE562B46E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentHtml.Intgeration", "FluentHtml.Intgeration\FluentHtml.Intgeration.csproj", "{C4D1377E-BD1E-4CBF-B0E5-2A3E95C6E3D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7E9C44C-1310-44E9-901A-F00497F9F6DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7E9C44C-1310-44E9-901A-F00497F9F6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7E9C44C-1310-44E9-901A-F00497F9F6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7E9C44C-1310-44E9-901A-F00497F9F6DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2398BF04-BE3A-42F9-BE81-75DE562B46E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2398BF04-BE3A-42F9-BE81-75DE562B46E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2398BF04-BE3A-42F9-BE81-75DE562B46E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2398BF04-BE3A-42F9-BE81-75DE562B46E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4D1377E-BD1E-4CBF-B0E5-2A3E95C6E3D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4D1377E-BD1E-4CBF-B0E5-2A3E95C6E3D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4D1377E-BD1E-4CBF-B0E5-2A3E95C6E3D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4D1377E-BD1E-4CBF-B0E5-2A3E95C6E3D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
