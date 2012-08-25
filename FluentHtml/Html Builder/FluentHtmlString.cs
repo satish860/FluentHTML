@@ -10,7 +10,7 @@ namespace FluentHtml
     public class FluentHtmlString:HtmlString
     {
         
-        public static readonly FluentHtmlString Empty = Create(String.Empty);
+       // public static readonly FluentHtmlString Empty = Create(String.Empty);
 
         private readonly string _value;
 
@@ -20,14 +20,14 @@ namespace FluentHtml
             _value = value ?? String.Empty;
         }
 
-        public static FluentHtmlString Create(string value)
-        {
-            return new FluentHtmlString(value);
-        }
+        //public static FluentHtmlString Create(string value)
+        //{
+        //    return new FluentHtmlString(value);
+        //}
 
-        public static bool IsNullOrEmpty(FluentHtmlString value)
-        {
-            return (value == null || value._value.Length == 0);
-        }
+        //public static bool IsNullOrEmpty(FluentHtmlString value)
+        //{
+        //    return (value == null || value._value.Length == 0);
+        //}
     }
 }

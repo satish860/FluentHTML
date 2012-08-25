@@ -11,23 +11,23 @@ namespace FluentHtml
 
         public static T Disabled<T>(this T inputElementBuilder, bool value) where T : IInputElementBuilder
         {
-            var disabled = value ? HTMLATTRIBUTE.DISABLED : string.Empty;
-            inputElementBuilder.Html.MergeAttribute(HTMLATTRIBUTE.DISABLED, disabled);
+            if (value)
+                inputElementBuilder.Html.MergeAttribute(HTMLATTRIBUTE.DISABLED, HTMLATTRIBUTE.DISABLED);
             return inputElementBuilder;
         }
 
-      
+
 
         public static T AutoFocus<T>(this T inputElementBuilder, bool value) where T : IInputElementBuilder
         {
-            var focus = value ? HTMLATTRIBUTE.AUTOFOCUS : string.Empty;
-            inputElementBuilder.Html.MergeAttribute(HTMLATTRIBUTE.AUTOFOCUS, focus);
+            if (value)
+                inputElementBuilder.Html.MergeAttribute(HTMLATTRIBUTE.AUTOFOCUS, HTMLATTRIBUTE.AUTOFOCUS);
             return inputElementBuilder;
         }
 
-       
 
-      
+
+
 
 
     }

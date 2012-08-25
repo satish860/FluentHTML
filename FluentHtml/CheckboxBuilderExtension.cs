@@ -10,8 +10,8 @@ namespace FluentHtml
     {
         public static T Checked<T>(this T checkBoxBuilder, bool value) where T : ICheckboxBuilder
         {
-            var Checked = value ? HTMLATTRIBUTE.CHECKED : string.Empty;
-            checkBoxBuilder.Html.MergeAttribute(HTMLATTRIBUTE.CHECKED, Checked);
+            if (value)
+                checkBoxBuilder.Html.MergeAttribute(HTMLATTRIBUTE.CHECKED, HTMLATTRIBUTE.CHECKED);
             return checkBoxBuilder;
         }
     }

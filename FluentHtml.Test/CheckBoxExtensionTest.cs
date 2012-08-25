@@ -32,14 +32,14 @@ namespace FluentHtml.Test
         }
 
         //Will come later
-        //[Test]
-        //public void Should_be_able_to_Generate_Without_Checked()
-        //{
-        //    ICheckboxBuilder checkbox = new CheckBoxBuilder("Name", HTMLATTRIBUTE.CHECKBOX)
-        //    .Checked(false);
-        //    var cqquery = CQ.Create(checkbox.ToString());
+        [Test]
+        public void Should_be_able_to_Generate_Without_Checked()
+        {
+            ICheckboxBuilder checkbox = new CheckBoxBuilder("Name", HTMLATTRIBUTE.CHECKBOX)
+            .Checked(false);
+            var cqquery = CQ.Create(checkbox.ToString());
+            cqquery.Select(p => p.Checked).First().Should().BeFalse();
             
-        //    cqquery.Attr(HTMLATTRIBUTE.CHECKED).Should().Be("");
-        //}
+        }
     }
 }
