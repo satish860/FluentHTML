@@ -50,7 +50,12 @@ namespace FluentHtml.Test
             string htmlTextBox = htmlhelper.RadioButtonFor<Customer>(p => p.IsChecked);
             var cq = CQ.Create(htmlTextBox);
             cq.Attr(HTMLATTRIBUTE.TYPE).Should().Be(HTMLATTRIBUTE.RADIO);
-           
+        }
+
+        public void Should_be_able_to_Create_A_Tag_with_the_Link()
+        {
+            FluentHtmlHelper<Customer> htmlhelper = new FluentHtmlHelper<Customer>();
+            string htmlanchortag = htmlhelper.Action<HomeController>(p => p.Get());
         }
     }
 }

@@ -42,5 +42,11 @@ namespace FluentHtml
                 return null;
             return new CheckBoxBuilder(memberExpression.Member.Name, HTMLATTRIBUTE.RADIO).ToString();
         }
+
+        public static string Action<TController>(this FluentHtmlHelper helper, Expression<Action<TController>> action)
+        {
+            var memberExpression = action.Body as MethodCallExpression;
+            return string.Empty;
+        }
     }
 }
