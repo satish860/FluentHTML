@@ -9,38 +9,48 @@ namespace FluentHtml
 {
     public static class FluentHtmlHelperExtension
     {
-        public static string TextBoxFor<TModel>(this FluentHtmlHelper<TModel> helper,Expression<Func<TModel,Object>> Property)
+        public static IInputElementBuilder TextBoxFor<TModel>(this FluentHtmlHelper<TModel> helper,Expression<Func<TModel,Object>> Property)
         {
             var memberExpression = Property.Body as MemberExpression;
             if (memberExpression == null)
                 return null;
-            return new InputBuilder(memberExpression.Member.Name,HTMLATTRIBUTE.TEXT).ToString();
+            return new InputBuilder(memberExpression.Member.Name,HTMLATTRIBUTE.TEXT);
         }
 
-        public static string PasswordFor<TModel>(this FluentHtmlHelper<TModel> helper, Expression<Func<TModel, Object>> Property)
+        public static IInputElementBuilder PasswordFor<TModel>(this FluentHtmlHelper<TModel> helper, Expression<Func<TModel, Object>> Property)
         {
             var memberExpression = Property.Body as MemberExpression;
             if (memberExpression == null)
                 return null;
-            return new InputBuilder(memberExpression.Member.Name, HTMLATTRIBUTE.PASSWORD).ToString();
-        }
-
-
-        public static string CheckBoxFor<TModel>(this FluentHtmlHelper<TModel> helper, Expression<Func<TModel, bool>> Property)
-        {
-            var memberExpression = Property.Body as MemberExpression;
-            if (memberExpression == null)
-                return null;
-            return new CheckBoxBuilder(memberExpression.Member.Name, HTMLATTRIBUTE.CHECKBOX).ToString();
+            return new InputBuilder(memberExpression.Member.Name, HTMLATTRIBUTE.PASSWORD);
         }
 
 
-        public static string RadioButtonFor<TModel>(this FluentHtmlHelper<TModel> helper, Expression<Func<TModel, bool>> Property)
+        public static ICheckboxBuilder CheckBoxFor<TModel>(this FluentHtmlHelper<TModel> helper, Expression<Func<TModel, bool>> Property)
         {
             var memberExpression = Property.Body as MemberExpression;
             if (memberExpression == null)
                 return null;
-            return new CheckBoxBuilder(memberExpression.Member.Name, HTMLATTRIBUTE.RADIO).ToString();
+            return new CheckBoxBuilder(memberExpression.Member.Name, HTMLATTRIBUTE.CHECKBOX);
+        }
+
+
+        public static ICheckboxBuilder RadioButtonFor<TModel>(this FluentHtmlHelper<TModel> helper, Expression<Func<TModel, bool>> Property)
+        {
+            var memberExpression = Property.Body as MemberExpression;
+            if (memberExpression == null)
+                return null;
+            return new CheckBoxBuilder(memberExpression.Member.Name, HTMLATTRIBUTE.RADIO);
+        }
+
+        public static IInputElementBuilder ResetButton(this FluentHtmlHelper helper)
+        {
+            return new InputBuilder("",HTMLATTRIBUTE.RESET);
+        }
+
+        public static ISubmitButton Submit(this FluentHtmlHelper helper,string name)
+        {
+            return new SubmitButton(name);
         }
 
         public static string Action<TController>(this FluentHtmlHelper helper, Expression<Action<TController>> action)

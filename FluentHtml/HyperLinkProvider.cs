@@ -30,12 +30,12 @@ namespace FluentHtml
             get { return this.request; }
         }
 
-        public Uri GetUri<TController>(Expression<Action<TController>> methodName)
+        public Uri GetRelativeUri<TController>(Expression<Action<TController>> methodExpression)
         {
-            var expression = methodName.Body as MethodCallExpression;
+            var expression = methodExpression.Body as MethodCallExpression;
             if (expression == null)
                 throw new ArgumentException("The expression should be a Method .The Code blocked supplied Should invoke a method for example x=>x.MethodName()", "methodName");
-            var Routes = dispatcher.Dispatch(methodName);
+            var Routes = dispatcher.Dispatch(methodExpression);
             return GetRelativeUri(Routes) ;
         }
 

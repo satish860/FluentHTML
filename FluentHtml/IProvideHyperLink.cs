@@ -8,6 +8,6 @@ namespace FluentHtml
 {
     public interface IProvideHyperLink
     {
-        Uri GetUri<TController>(Expression<Action<TController>> methodExpression);
+        Uri GetRelativeUri<TController>(Expression<Action<TController>> methodExpression);
     }
 }

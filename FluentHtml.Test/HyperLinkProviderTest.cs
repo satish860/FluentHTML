@@ -25,7 +25,7 @@ namespace FluentHtml.Test
             request.Properties[HttpPropertyKeys.HttpConfigurationKey] = configuration;
             request.AddDefaultRoute();
             IProvideHyperLink provideHyperLink = new HyperLinkProvider(request);
-            Uri url = provideHyperLink.GetUri<HomeController>(p => p.Get());
+            Uri url = provideHyperLink.GetRelativeUri<HomeController>(p => p.Get());
             url.ToString().Should().Be("/api/home");
         }
 
@@ -57,7 +57,7 @@ namespace FluentHtml.Test
             IProvideHyperLink provideHyperLink = new HyperLinkProvider(request);
             Expression<Action<object>> expressionWhichIsNotAMethodCall =
                 _ => new object();
-            Uri url = provideHyperLink.GetUri(expressionWhichIsNotAMethodCall);
+            Uri url = provideHyperLink.GetRelativeUri(expressionWhichIsNotAMethodCall);
         }
     }
 }

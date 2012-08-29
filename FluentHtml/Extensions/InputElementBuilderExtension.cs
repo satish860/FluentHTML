@@ -16,8 +16,6 @@ namespace FluentHtml
             return inputElementBuilder;
         }
 
-
-
         public static T AutoFocus<T>(this T inputElementBuilder, bool value) where T : IInputElementBuilder
         {
             if (value)

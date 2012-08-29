@@ -27,8 +27,8 @@ namespace FluentHtml.Intgeration
             using (var template = new TemplateService(templateConfiguration))
             {
                 FluentHtmlHelper<Customer> HTML = new FluentHtmlHelper<Customer>();
-                string inputTemplate = "@HTML.TextBoxFor(p => p.Name);";
-                string output = template.Parse(inputTemplate, new Customer(), null, null);
+                string inputTemplate = "@HTML.TextBoxFor(p => p.Name).Disabled(true);";
+                string output = template.Parse(inputTemplate, new Customer());
                 CQ.Create(output).Attr("name").Should().Be("Name");
             }
         }

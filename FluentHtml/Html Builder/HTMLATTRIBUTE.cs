@@ -23,6 +23,8 @@ namespace FluentHtml
         public const string PASSWORD = "password";
         public const string CHECKBOX = "checkbox";
         public const string RADIO = "radio";
+        public const string RESET = "reset";
+        public const string SUBMIT = "submit";
         #endregion
 
 
