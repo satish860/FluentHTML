@@ -20,6 +20,6 @@ InProgress
 
 * HTML 5 Controls
 * Buttons ,Input With Submit
-* A and Forms
+* Anchor tag and Forms tag
 * Bootstrap based Controls
  
