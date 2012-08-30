@@ -1,7 +1,7 @@
 ﻿
 namespace FluentHtml
 {
-    public  class HTMLATTRIBUTE
+    public class HTMLATTRIBUTE
     {
         public const string TYPE = "type";
         public const string VALUE = "value";
@@ -16,7 +16,9 @@ namespace FluentHtml
         public const string NAME = "name";
         public const string CLASS = "class";
         public const string CHECKED = "checked";
-       
+        public const string ACCEPT = "accept";
+        public const string MULTIPLE = "multiple";
+
 
         #region InputTYPE
         public const string TEXT = "text";
@@ -25,9 +27,10 @@ namespace FluentHtml
         public const string RADIO = "radio";
         public const string RESET = "reset";
         public const string SUBMIT = "submit";
+        public const string File = "file";
         #endregion
 
 
-        
+
     }
 }

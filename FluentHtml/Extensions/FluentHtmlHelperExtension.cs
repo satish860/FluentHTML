@@ -43,14 +43,22 @@ namespace FluentHtml
             return new CheckBoxBuilder(memberExpression.Member.Name, HTMLATTRIBUTE.RADIO);
         }
 
-        public static IInputElementBuilder ResetButton(this FluentHtmlHelper helper)
+        public static IInputElementBuilder ResetButton(this FluentHtmlHelper helper,string name)
         {
-            return new InputBuilder("",HTMLATTRIBUTE.RESET);
+            return new InputBuilder(name, HTMLATTRIBUTE.RESET);
         }
 
         public static ISubmitButton Submit(this FluentHtmlHelper helper,string name)
         {
             return new SubmitButton(name);
+        }
+
+        public static IFileInputBuilder FileFor<TModel>(this FluentHtmlHelper<TModel> helper, Expression<Func<TModel, byte[]>> Property)
+        {
+            var memberExpression = Property.Body as MemberExpression;
+            if (memberExpression == null)
+                return null;
+            return new FileInputBuilder(memberExpression.Member.Name, HTMLATTRIBUTE.File);
         }
 
         public static string Action<TController>(this FluentHtmlHelper helper, Expression<Action<TController>> action)

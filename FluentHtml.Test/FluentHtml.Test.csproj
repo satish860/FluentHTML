@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="CheckBoxExtensionTest.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="FluentFileHelperExtensionTest.cs" />
     <Compile Include="FluentHtmlActionTest.cs" />
     <Compile Include="FluentHtmlExtensionTest.cs" />
     <Compile Include="FluentPasswordBoxTest.cs" />

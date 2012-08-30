@@ -10,5 +10,7 @@ namespace FluentHtml.Test
         public string Name { get; set; }
 
         public bool IsChecked { get; set; }
+
+        public byte[] fileFormat { get; set; }
     }
 }
