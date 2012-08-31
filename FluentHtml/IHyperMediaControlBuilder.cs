@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace FluentHtml
 {
-    public class HTMLTAG
+    public interface IHyperMediaControlBuilder : IElementBuilder
     {
-        public const string INPUT = "input";
-        public const string ANCHOR = "a";
+        string ProvideLink();
     }
 }

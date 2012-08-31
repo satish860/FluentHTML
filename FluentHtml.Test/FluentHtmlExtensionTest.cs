@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using FluentAssertions;
 using FluentHtml;
 using NUnit.Framework;
+using System.Net.Http;
+using System.Web.Http;
+using System.Web.Http.Hosting;
 
 namespace FluentHtml.Test
 {
@@ -88,10 +91,18 @@ namespace FluentHtml.Test
             cq.Attr(HTMLATTRIBUTE.TYPE).Should().Be(HTMLATTRIBUTE.HIDDEN);
         }
 
+        [Test]
         public void Should_be_able_to_Create_A_Tag_with_the_Link()
         {
             FluentHtmlHelper<Customer> htmlhelper = new FluentHtmlHelper<Customer>();
-            string htmlanchortag = htmlhelper.Action<HomeController>(p => p.Get());
+            htmlhelper.Request = new HttpRequestMessage();
+            htmlhelper.Request.RequestUri = new Uri("http://localhost/api/home");
+            HttpConfiguration configuration = new HttpConfiguration();
+            htmlhelper.Request.Properties[HttpPropertyKeys.HttpConfigurationKey] = configuration;
+            htmlhelper.Request.AddDefaultRoute();
+            string htmlanchortag = htmlhelper.Action<HomeController>(p => p.Get()).ToString();
+            var cq = CQ.Create(htmlanchortag);
+            cq.Attr(HTMLATTRIBUTE.HREF).Should().Be("/api/home");
         }
     }
 }

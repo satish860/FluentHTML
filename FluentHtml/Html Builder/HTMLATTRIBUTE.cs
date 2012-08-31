@@ -18,8 +18,15 @@ namespace FluentHtml
         public const string CHECKED = "checked";
         public const string ACCEPT = "accept";
         public const string MULTIPLE = "multiple";
-
-
+        public const string HREF = "href";
+        public const string BLANK = "_blank";
+        public const string Self = "_Self";
+        public const string PARENT = "_parent";
+        public const string Target = "target";
+        public const string TOP = "_top";
+        public const string REL = "rel";
+        public const string Language = "hreflang";
+       
         #region InputTYPE
         public const string TEXT = "text";
         public const string PASSWORD = "password";

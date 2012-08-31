@@ -65,6 +65,9 @@
     <Compile Include="BuilderInterface\ITextBoxBuilder.cs" />
     <Compile Include="BuilderInterface\ICheckboxBuilder.cs" />
     <Compile Include="BuilderInterface\IFileInputBuilder.cs" />
+    <Compile Include="HyperMediaControlExtensions.cs" />
+    <Compile Include="IHyperMediaControlBuilder.cs" />
+    <Compile Include="Controls\HtmlActionTag.cs" />
     <Compile Include="URL\HyperLinkProvider.cs" />
     <Compile Include="URL\IProvideHyperLink.cs" />
     <Compile Include="BuilderInterface\ISubmitButton.cs" />

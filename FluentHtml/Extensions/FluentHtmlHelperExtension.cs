@@ -9,12 +9,12 @@ namespace FluentHtml
 {
     public static class FluentHtmlHelperExtension
     {
-        public static IInputElementBuilder TextBoxFor<TModel>(this FluentHtmlHelper<TModel> helper,Expression<Func<TModel,Object>> Property)
+        public static IInputElementBuilder TextBoxFor<TModel>(this FluentHtmlHelper<TModel> helper, Expression<Func<TModel, Object>> Property)
         {
             var memberExpression = Property.Body as MemberExpression;
             if (memberExpression == null)
                 return null;
-            return new InputBuilder(memberExpression.Member.Name,HTMLATTRIBUTE.TEXT);
+            return new InputBuilder(memberExpression.Member.Name, HTMLATTRIBUTE.TEXT);
         }
 
         public static IInputElementBuilder PasswordFor<TModel>(this FluentHtmlHelper<TModel> helper, Expression<Func<TModel, Object>> Property)
@@ -51,12 +51,12 @@ namespace FluentHtml
             return new CheckBoxBuilder(memberExpression.Member.Name, HTMLATTRIBUTE.RADIO);
         }
 
-        public static IInputElementBuilder ResetButton(this FluentHtmlHelper helper,string name)
+        public static IInputElementBuilder ResetButton(this FluentHtmlHelper helper, string name)
         {
             return new InputBuilder(name, HTMLATTRIBUTE.RESET);
         }
 
-        public static ISubmitButton Submit(this FluentHtmlHelper helper,string name)
+        public static ISubmitButton Submit(this FluentHtmlHelper helper, string name)
         {
             return new SubmitButton(name);
         }
@@ -69,10 +69,11 @@ namespace FluentHtml
             return new FileInputBuilder(memberExpression.Member.Name, HTMLATTRIBUTE.File);
         }
 
-        public static string Action<TController>(this FluentHtmlHelper helper, Expression<Action<TController>> action)
+        public static IHyperMediaControlBuilder Action<TController>(this FluentHtmlHelper helper, Expression<Action<TController>> action)
         {
-            var memberExpression = action.Body as MethodCallExpression;
-            return string.Empty;
+            IProvideHyperLink provideLink = new HyperLinkProvider(helper.Request);
+            var Link = provideLink.GetRelativeUri(action);
+            return new HtmlActionTag(Link.ToString());
         }
     }
 }
