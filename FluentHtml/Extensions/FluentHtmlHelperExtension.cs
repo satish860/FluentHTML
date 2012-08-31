@@ -25,6 +25,14 @@ namespace FluentHtml
             return new InputBuilder(memberExpression.Member.Name, HTMLATTRIBUTE.PASSWORD);
         }
 
+        public static IInputElementBuilder Hidden<TModel>(this FluentHtmlHelper<TModel> helper, Expression<Func<TModel, Object>> Property)
+        {
+            var memberExpression = Property.Body as MemberExpression;
+            if (memberExpression == null)
+                return null;
+            return new InputBuilder(memberExpression.Member.Name, HTMLATTRIBUTE.HIDDEN);
+        }
+
 
         public static ICheckboxBuilder CheckBoxFor<TModel>(this FluentHtmlHelper<TModel> helper, Expression<Func<TModel, bool>> Property)
         {

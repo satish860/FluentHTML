@@ -28,6 +28,7 @@ namespace FluentHtml
         public const string RESET = "reset";
         public const string SUBMIT = "submit";
         public const string File = "file";
+        public const string HIDDEN = "hidden";
         #endregion
 
 

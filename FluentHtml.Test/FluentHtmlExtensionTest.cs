@@ -79,6 +79,15 @@ namespace FluentHtml.Test
             cq.Attr(HTMLATTRIBUTE.TYPE).Should().Be(HTMLATTRIBUTE.File);
         }
 
+        [Test]
+        public void Should_be_able_to_Generate_a_Hidden_Field_With_Model_And_Property()
+        {
+            FluentHtmlHelper<Customer> htmlhelper = new FluentHtmlHelper<Customer>();
+            string FileInput = htmlhelper.Hidden(P => P.Name).ToString();
+            var cq = CQ.Create(FileInput);
+            cq.Attr(HTMLATTRIBUTE.TYPE).Should().Be(HTMLATTRIBUTE.HIDDEN);
+        }
+
         public void Should_be_able_to_Create_A_Tag_with_the_Link()
         {
             FluentHtmlHelper<Customer> htmlhelper = new FluentHtmlHelper<Customer>();

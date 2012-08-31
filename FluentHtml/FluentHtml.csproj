@@ -52,8 +52,8 @@
     <Compile Include="Controls\CheckBoxBuilder.cs" />
     <Compile Include="Extensions\CheckboxBuilderExtension.cs" />
     <Compile Include="Extensions\ElementBuilderExtensions.cs" />
-    <Compile Include="FileBuilderExtensions.cs" />
-    <Compile Include="FileInputBuilder.cs" />
+    <Compile Include="Extensions\FileBuilderExtensions.cs" />
+    <Compile Include="Controls\FileInputBuilder.cs" />
     <Compile Include="FluentHtmlHelper.cs" />
     <Compile Include="Extensions\FluentHtmlHelperExtension.cs" />
     <Compile Include="Html Builder\FluentHtmlString.cs" />
@@ -64,7 +64,7 @@
     <Compile Include="BuilderInterface\IInputElementBuilder.cs" />
     <Compile Include="BuilderInterface\ITextBoxBuilder.cs" />
     <Compile Include="BuilderInterface\ICheckboxBuilder.cs" />
-    <Compile Include="IFileInputBuilder.cs" />
+    <Compile Include="BuilderInterface\IFileInputBuilder.cs" />
     <Compile Include="URL\HyperLinkProvider.cs" />
     <Compile Include="URL\IProvideHyperLink.cs" />
     <Compile Include="BuilderInterface\ISubmitButton.cs" />
