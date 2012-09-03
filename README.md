@@ -4,7 +4,7 @@
 	Fluent HTML is an API which helps to write the HTML markup using fluent interfaces.
 	This is different from the default HTML helper methods that are available in MVC since,
 	this does not uses the instances of context classes like ViewContext, ControllerContext etc.
-	This makes it testable and portable to any framework other than MVC.
+	Apart from being usable in MVC, this makes it testable and portable to any framework other than MVC.
 </p>
 <p>
 	This also provides the ability to specify distinct CSS class name for each of the controls
