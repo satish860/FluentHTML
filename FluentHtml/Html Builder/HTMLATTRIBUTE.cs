@@ -1,5 +1,4 @@
-﻿
-namespace FluentHtml
+﻿namespace FluentHtml
 {
     public class HTMLATTRIBUTE
     {
@@ -26,8 +25,9 @@ namespace FluentHtml
         public const string TOP = "_top";
         public const string REL = "rel";
         public const string Language = "hreflang";
-       
+
         #region InputTYPE
+
         public const string TEXT = "text";
         public const string PASSWORD = "password";
         public const string CHECKBOX = "checkbox";
@@ -36,9 +36,7 @@ namespace FluentHtml
         public const string SUBMIT = "submit";
         public const string File = "file";
         public const string HIDDEN = "hidden";
-        #endregion
 
-
-
+        #endregion InputTYPE
     }
 }

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
+﻿using CsQuery;
 using FluentAssertions;
-using CsQuery;
+using NUnit.Framework;
+using System.Linq;
 
 namespace FluentHtml.Test
 {
@@ -15,7 +11,7 @@ namespace FluentHtml.Test
         [Test]
         public void Should_be_able_to_generate_the_Checkbox_with_the_Id_and_Name()
         {
-            ICheckboxBuilder checkbox = new CheckBoxBuilder("Name",HTMLATTRIBUTE.CHECKBOX);
+            ICheckboxBuilder checkbox = new CheckBoxBuilder("Name", HTMLATTRIBUTE.CHECKBOX);
             var cqquery = CQ.Create(checkbox.ToString());
             cqquery.Attr(HTMLATTRIBUTE.NAME).Should().Be("Name");
             cqquery.Attr(HTMLATTRIBUTE.ID).Should().Be("Name");
@@ -28,7 +24,6 @@ namespace FluentHtml.Test
                                               .Checked(true);
             var cqquery = CQ.Create(checkbox.ToString());
             cqquery.Attr(HTMLATTRIBUTE.CHECKED).Should().Be("checked");
-
         }
 
         //Will come later
@@ -39,7 +34,6 @@ namespace FluentHtml.Test
             .Checked(false);
             var cqquery = CQ.Create(checkbox.ToString());
             cqquery.Select(p => p.Checked).First().Should().BeFalse();
-            
         }
     }
 }

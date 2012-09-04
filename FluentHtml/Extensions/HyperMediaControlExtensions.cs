@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FluentHtml
 {
     public static class HyperMediaControlExtensions
     {
         public const string Comma = ",";
+
         public static T Href<T>(this T hyperlinkBuilder, string link) where T : IHyperMediaControlBuilder
         {
             hyperlinkBuilder.Html.MergeAttribute(HTMLATTRIBUTE.HREF, link);
@@ -28,10 +25,8 @@ namespace FluentHtml
             return hyperlinkBuilder;
         }
 
-
-
         /// <summary>
-        /// Open in Parent Window is used for opening the Link in parent Windows Which essentially will be 
+        /// Open in Parent Window is used for opening the Link in parent Windows Which essentially will be
         /// done from the POPUP. Its a very bad decision Until you are selling ADS ,Dont use Popup
         /// </summary>
         /// <typeparam name="T"></typeparam>
@@ -49,9 +44,9 @@ namespace FluentHtml
             return hyperlinkBuilder;
         }
 
-        public static T OpenInFrame<T>(this T hyperlinkBuilder,string frame) where T : IHyperMediaControlBuilder
+        public static T OpenInFrame<T>(this T hyperlinkBuilder, string frame) where T : IHyperMediaControlBuilder
         {
-            hyperlinkBuilder.Html.MergeAttribute(HTMLATTRIBUTE.Target,frame);
+            hyperlinkBuilder.Html.MergeAttribute(HTMLATTRIBUTE.Target, frame);
             return hyperlinkBuilder;
         }
 
@@ -61,7 +56,6 @@ namespace FluentHtml
             return hyperlinkBuilder;
         }
 
-        
         public static T AcceptType<T>(this T fileInputBuilder, params string[] acceptedMimeType) where T : IHyperMediaControlBuilder
         {
             foreach (var item in acceptedMimeType)
@@ -77,8 +71,6 @@ namespace FluentHtml
         {
             hyperlinkBuilder.Html.MergeAttribute(HTMLATTRIBUTE.Language, language);
             return hyperlinkBuilder;
-        } 
-
-
+        }
     }
 }

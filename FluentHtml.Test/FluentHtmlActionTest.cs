@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
+﻿using CsQuery;
 using FluentAssertions;
-using CsQuery;
-using FluentHtml;
+using NUnit.Framework;
+using System;
 
 namespace FluentHtml.Test
 {
@@ -60,7 +55,6 @@ namespace FluentHtml.Test
             cq.Attr(HTMLATTRIBUTE.Target).Should().Be(HTMLATTRIBUTE.TOP);
         }
 
-
         [Test]
         public void Should_be_able_to_Generate_the_target_for_the_Browser_to_open_in_Frame()
         {
@@ -104,7 +98,6 @@ namespace FluentHtml.Test
             IHyperMediaControlBuilder control = new HtmlActionTag("/api/app").AcceptType(@"image\gif");
             string htmlTextBox = control.ToString();
             var cq = CQ.Create(htmlTextBox);
-           
         }
     }
 }

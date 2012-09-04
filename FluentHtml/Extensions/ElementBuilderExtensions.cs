@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FluentHtml
+﻿namespace FluentHtml
 {
     public static class ElementBuilderExtensions
     {
@@ -25,6 +19,5 @@ namespace FluentHtml
             elementBuilder.Html.AddCssClass(cssClass);
             return elementBuilder;
         }
-       
     }
 }

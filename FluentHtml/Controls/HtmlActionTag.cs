@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace FluentHtml
+﻿namespace FluentHtml
 {
     public class HtmlActionTag : IHyperMediaControlBuilder
     {
         private readonly string Link;
         private readonly TagBuilder tagbuilder;
+
         public HtmlActionTag(string link)
         {
             this.tagbuilder = new TagBuilder(HTMLTAG.ANCHOR);

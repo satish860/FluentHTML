@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace FluentHtml
+﻿namespace FluentHtml
 {
     public class FileInputBuilder : IFileInputBuilder
     {
+        private TagBuilder builder;
 
-        TagBuilder builder;
         public FileInputBuilder(string name, string type)
         {
             builder = new TagBuilder(HTMLTAG.INPUT);

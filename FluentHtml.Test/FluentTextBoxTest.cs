@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
+﻿using CsQuery;
 using FluentAssertions;
-using CsQuery;
-using FluentHtml;
+using NUnit.Framework;
 
 namespace FluentHtml.Test
 {
@@ -18,10 +12,11 @@ namespace FluentHtml.Test
         {
             ITextBoxBuilder textbox = new InputBuilder("Name", HTMLATTRIBUTE.TEXT).Value("Satish");
             string htmlTextBox = textbox.ToString();
-            var cq=CQ.Create(htmlTextBox);
+            var cq = CQ.Create(htmlTextBox);
             cq.Attr("name").Should().Be("Name");
             cq.Val().Should().Be("Satish");
         }
+
         [Test]
         public void Should_be_able_to_Generate_the_Text_With_Disabled_and_ReadOnly_TextBox()
         {
@@ -58,7 +53,5 @@ namespace FluentHtml.Test
             cq.Attr("name").Should().Be("Name");
             cq.Attr("placeholder").Should().Be("SomeText");
         }
-
-
     }
 }

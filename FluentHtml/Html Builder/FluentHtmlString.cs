@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web;
 
 namespace FluentHtml
 {
-    public class FluentHtmlString:HtmlString
+    public class FluentHtmlString : HtmlString
     {
-        
-       // public static readonly FluentHtmlString Empty = Create(String.Empty);
+        // public static readonly FluentHtmlString Empty = Create(String.Empty);
 
         private readonly string _value;
 

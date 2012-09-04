@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace FluentHtml
+﻿namespace FluentHtml
 {
-    public interface IInputElementBuilder:IElementBuilder
+    public interface IInputElementBuilder : IElementBuilder
     {
     }
 }

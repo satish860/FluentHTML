@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FluentHtml
+﻿namespace FluentHtml
 {
     public class SubmitButton : ISubmitButton
     {
-        TagBuilder builder;
+        private TagBuilder builder;
+
         public SubmitButton(string name)
         {
             builder = new TagBuilder(HTMLTAG.INPUT);

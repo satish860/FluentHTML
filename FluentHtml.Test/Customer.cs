@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace FluentHtml.Test
+﻿namespace FluentHtml.Test
 {
     public class Customer
     {

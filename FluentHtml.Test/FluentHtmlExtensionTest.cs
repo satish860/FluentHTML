@@ -1,12 +1,7 @@
 ﻿using CsQuery;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FluentAssertions;
-using FluentHtml;
 using NUnit.Framework;
+using System;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Hosting;
@@ -63,7 +58,7 @@ namespace FluentHtml.Test
             var cq = CQ.Create(htmlTextBox);
             cq.Attr(HTMLATTRIBUTE.TYPE).Should().Be(HTMLATTRIBUTE.RESET);
         }
-        
+
         [Test]
         public void Should_be_able_to_Generate_a_Submit_Button()
         {

@@ -7,12 +7,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentHtml.Test", "FluentHt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentHtml.Intgeration", "FluentHtml.Intgeration\FluentHtml.Intgeration.csproj", "{C4D1377E-BD1E-4CBF-B0E5-2A3E95C6E3D5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BAE79780-1701-4E12-A478-D4B1E18E4372}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0C3050DD-3ED0-4E36-9047-8C5F0E2A4751}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.Source", "01.Source", "{60CF89F1-BAA9-4D67-AFDC-B05BFD756130}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.Tests", "02.Tests", "{7E9767D3-7C00-4C57-9C94-2034DD97D4CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,5 +39,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B7E9C44C-1310-44E9-901A-F00497F9F6DC} = {60CF89F1-BAA9-4D67-AFDC-B05BFD756130}
+		{C4D1377E-BD1E-4CBF-B0E5-2A3E95C6E3D5} = {7E9767D3-7C00-4C57-9C94-2034DD97D4CC}
+		{2398BF04-BE3A-42F9-BE81-75DE562B46E6} = {7E9767D3-7C00-4C57-9C94-2034DD97D4CC}
 	EndGlobalSection
 EndGlobal

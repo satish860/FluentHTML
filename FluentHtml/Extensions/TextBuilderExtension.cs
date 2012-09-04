@@ -1,5 +1,4 @@
-﻿
-namespace FluentHtml
+﻿namespace FluentHtml
 {
     public static class TextBuilderExtension
     {

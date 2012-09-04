@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Http.Hosting;
 using System.Web.Http.Routing;
 
 namespace FluentHtml
 {
-    public class HyperLinkProvider:IProvideHyperLink
+    public class HyperLinkProvider : IProvideHyperLink
     {
         private HttpRequestMessage request;
         private IUrlDispatcher dispatcher;
+
         public HyperLinkProvider(HttpRequestMessage request)
         {
             this.request = request;
@@ -36,10 +34,10 @@ namespace FluentHtml
             if (expression == null)
                 throw new ArgumentException("The expression should be a Method .The Code blocked supplied Should invoke a method for example x=>x.MethodName()", "methodName");
             var Routes = dispatcher.Dispatch(methodExpression);
-            return GetRelativeUri(Routes) ;
+            return GetRelativeUri(Routes);
         }
 
-        private Uri GetRelativeUri(Tuple<string,IDictionary<string,object>> routes)
+        private Uri GetRelativeUri(Tuple<string, IDictionary<string, object>> routes)
         {
             var urlHelper = this.CreateUrlHelper();
             var relativeUri = urlHelper.Route(routes.Item1, routes.Item2);
@@ -59,7 +57,6 @@ namespace FluentHtml
 
             try
             {
-
                 foreach (var kvp in this.request.Properties)
                     if (kvp.Key != HttpPropertyKeys.HttpRouteDataKey)
                         r.Properties.Add(kvp.Key, kvp.Value);
@@ -89,7 +86,5 @@ namespace FluentHtml
             if (disposing)
                 this.request.Dispose();
         }
-
-
     }
 }

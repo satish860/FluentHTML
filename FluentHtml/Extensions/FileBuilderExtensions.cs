@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FluentHtml
 {
     public static class FileBuilderExtensions
     {
         public const string Comma = ",";
+
         public static T Accept<T>(this T fileInputBuilder, params string[] acceptedMimeType) where T : IFileInputBuilder
         {
             foreach (var item in acceptedMimeType)

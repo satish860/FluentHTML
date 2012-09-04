@@ -1,5 +1,4 @@
-﻿
-namespace FluentHtml
+﻿namespace FluentHtml
 {
     public static class InputElementBuilderExtension
     {
@@ -22,11 +21,5 @@ namespace FluentHtml
                 inputElementBuilder.Html.MergeAttribute(HTMLATTRIBUTE.AUTOFOCUS, HTMLATTRIBUTE.AUTOFOCUS);
             return inputElementBuilder;
         }
-
-
-
-
-
-
     }
 }

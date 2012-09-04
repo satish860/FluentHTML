@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Web;
 
 namespace FluentHtml
@@ -33,7 +31,7 @@ namespace FluentHtml
             {
                 if (String.IsNullOrEmpty(_idAttributeDotReplacement))
                 {
-                   // _idAttributeDotReplacement = HtmlHelper.IdAttributeDotReplacement;
+                    // _idAttributeDotReplacement = HtmlHelper.IdAttributeDotReplacement;
                 }
                 return _idAttributeDotReplacement;
             }
@@ -65,6 +63,7 @@ namespace FluentHtml
         public static string CreateSanitizedId(string originalId)
         {
             return string.Empty;
+
             //return CreateSanitizedId(originalId, HtmlHelper.IdAttributeDotReplacement);
         }
 
@@ -198,11 +197,13 @@ namespace FluentHtml
                     AppendAttributes(sb);
                     sb.Append('>');
                     break;
+
                 case TagRenderMode.EndTag:
                     sb.Append("</")
                         .Append(TagName)
                         .Append('>');
                     break;
+
                 case TagRenderMode.SelfClosing:
                     sb.Append('<')
                         .Append(TagName);
@@ -233,6 +234,7 @@ namespace FluentHtml
                     case '-':
                     case '_':
                     case ':':
+
                         // note that we're specifically excluding the '.' character
                         return true;
 

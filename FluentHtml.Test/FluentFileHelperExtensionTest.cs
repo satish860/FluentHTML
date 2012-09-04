@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CsQuery;
-using NUnit.Framework;
+﻿using CsQuery;
 using FluentAssertions;
-using FluentHtml;
+using NUnit.Framework;
+using System;
 
 namespace FluentHtml.Test
 {
@@ -25,7 +20,7 @@ namespace FluentHtml.Test
         }
 
         [Test]
-        [ExpectedException(ExpectedException=typeof(FormatException))]
+        [ExpectedException(ExpectedException = typeof(FormatException))]
         public void Should_throw_error_if_the_Mime_Type_is_Wrong()
         {
             IFileInputBuilder textbox = new FileInputBuilder("Name", HTMLATTRIBUTE.File)

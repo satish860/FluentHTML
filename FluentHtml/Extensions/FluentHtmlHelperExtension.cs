@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FluentHtml
 {
@@ -33,7 +29,6 @@ namespace FluentHtml
             return new InputBuilder(memberExpression.Member.Name, HTMLATTRIBUTE.HIDDEN);
         }
 
-
         public static ICheckboxBuilder CheckBoxFor<TModel>(this FluentHtmlHelper<TModel> helper, Expression<Func<TModel, bool>> Property)
         {
             var memberExpression = Property.Body as MemberExpression;
@@ -41,7 +36,6 @@ namespace FluentHtml
                 return null;
             return new CheckBoxBuilder(memberExpression.Member.Name, HTMLATTRIBUTE.CHECKBOX);
         }
-
 
         public static ICheckboxBuilder RadioButtonFor<TModel>(this FluentHtmlHelper<TModel> helper, Expression<Func<TModel, bool>> Property)
         {

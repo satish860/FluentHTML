@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
+﻿using CsQuery;
 using FluentAssertions;
-using FluentHtml;
-using CsQuery;
+using NUnit.Framework;
 using RazorEngine.Configuration;
 using RazorEngine.Templating;
 using RazorEngine.Text;
